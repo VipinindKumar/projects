@@ -2,15 +2,15 @@
 title: Vipin Kumar
 subtitle: Projects
 email: youremailaddress@gmail.com
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+description: Machine Learning, Python, Java
 baseurl: "/projects" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
-country: United States of America
+street_address: 
+city: Delhi
+state: 
+zip_code: 
+country: India
 phone: (716) 555-5555
 
 # homepage tiles
