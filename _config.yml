@@ -2,7 +2,7 @@
 title: Vipin Kumar
 subtitle: Projects
 email: vipin.ind.kumar@gmail.com
-description: Machine Learning, Python, Java
+description: Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks, Python, Matlab/Octave, Java, C, JavaScript, PHP, SQL, Standard ML, Racket, Scikit-Learn, Keras, TensorFlow, pandas, NumPy, Programming language theory, Functional Programming, OOP, Systematic Program Design
 baseurl: "/projects" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
