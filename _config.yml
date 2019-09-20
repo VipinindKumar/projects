@@ -2,10 +2,10 @@
 title: Vipin Kumar
 subtitle: Projects
 email: vipin.ind.kumar@gmail.com
-description: "<b>Machine Learning:\</b> Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks<br>
-             <b>Languages:\</b> Python, Matlab/Octave, Java, C, JavaScript, PHP, SQL, Standard ML, Racket<br>
-             <b>Technologies:\</b> Scikit-Learn, Keras, TensorFlow, pandas, NumPy, Linux<br>
-             <b>Computer Science:\</b> Programming language theory, Functional Programming, OOP, Systematic Program Design"
+description: "<b>aMachine Learning:\ </b>Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks<br>
+             <b>Languages:\ </b>Python, Matlab/Octave, Java, C, JavaScript, PHP, SQL, Standard ML, Racket<br>
+             <b>Technologies:\ </b>Scikit-Learn, Keras, TensorFlow, pandas, NumPy, Linux<br>
+             <b>Computer Science:\ </b>Programming language theory, Functional Programming, OOP, Systematic Program Design"
 baseurl: "/projects" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
