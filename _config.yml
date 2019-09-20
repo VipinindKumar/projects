@@ -7,10 +7,10 @@ baseurl: "/projects" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
 street_address: 
-city: 
+city: Delhi
 state: 
 zip_code: 
-country: 
+country: India
 phone: (716) 555-5555
 
 # homepage tiles
