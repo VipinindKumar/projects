@@ -2,31 +2,31 @@
 
 ## Version 1.0:
 
-![new1.0](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif)
+![1.0](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif)
 
 * Added smoothness of the average line between frames, to make the average line much more stable
 
 ## Version 0.9:
 
-![0.9](output/out0.9.gif)
+![0.9](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.9.gif)
 
 * Added a average of all the lines, as a single line in the video
 
 ## Version 0.85:
 
-![0.85](output/out0.85.gif)
+![0.85](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.85.gif)
 
 * Increase the quality of lines predicted by dilating the frame after canny function, which increases the width of the foreground objects making it easier to capture lines
 
 ## Version 0.8:
 
-![0.8](output/out0.8.gif)
+![0.8](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.8.gif)
 
 * Improve lines detection, using improved parameters values for HoughLInesP
 
 ## Version 0.5:
 
-![0.5](output/out0.5.gif)
+![0.5](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.5.gif)
 
 ### Every frame from the video:
 * is turned into grey-scale version using cv2.cvtColor function
