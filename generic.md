@@ -2,7 +2,8 @@
 layout: post
 title: Generic
 description: Lorem ipsum dolor est
-image: https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif
+image: 
+gif: https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif
 nav-menu: true
 ---
 
