@@ -2,7 +2,7 @@
 
 ## Version 1.0:
 
-![1.0](/assets/gifs/output.gif)
+![new1.0](https://github.com/VipinindKumar/Self-Driving/blob/master/output/out1.0.gif)
 
 * Added smoothness of the average line between frames, to make the average line much more stable
 
