@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generic
+title: Self-Driving - Lane Detection
 description: Lorem ipsum dolor est
 image: https://github.com/VipinindKumar/Self-Driving/raw/master/output/short1.0.gif
 gif: https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif
