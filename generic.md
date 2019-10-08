@@ -7,8 +7,40 @@ gif: https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif
 nav-menu: true
 ---
 
-Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+# Self-Driving - Lane Detection: program to detect lanes in a video 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+## Version 1.0:
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
+![1.0](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif)
+
+* Added smoothness of the average line between frames, to make the average line much more stable
+
+## Version 0.9:
+
+![0.9](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.9.gif)
+
+* Added a average of all the lines, as a single line in the video
+
+## Version 0.85:
+
+![0.85](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.85.gif)
+
+* Increase the quality of lines predicted by dilating the frame after canny function, which increases the width of the foreground objects making it easier to capture lines
+
+## Version 0.8:
+
+![0.8](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.8.gif)
+
+* Improve lines detection, using improved parameters values for HoughLInesP
+
+## Version 0.5:
+
+![0.5](https://github.com/VipinindKumar/Self-Driving/raw/master/output/out0.5.gif)
+
+### Every frame from the video:
+* is turned into grey-scale version using cv2.cvtColor function
+* Finds edges in the frame using the [Canny86] algorithm by computing gradient, to identify change in pixels
+* Using region_wants function discards the non-important areas of the frame for lane detection
+* cv2.HoughLinesP to detect different lines passing through points detected by canny method
+* Draw these lines on blank image of frame's size
+* Use cv2.addWeighted function, to combine the original frame and empty image with drawn lines
