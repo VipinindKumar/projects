@@ -2,7 +2,7 @@
 
 ## Version 1.0:
 
-![1.0](assets/gifs/output.gif)
+![1.0](projects/assets/gifs/output.gif)
 
 * Added smoothness of the average line between frames, to make the average line much more stable
 
