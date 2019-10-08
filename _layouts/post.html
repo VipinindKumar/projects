@@ -23,7 +23,11 @@
 			<h1>{{ page.title }}</h1>
 		</header>
 		{% if page.gif %}
-		<span class="image main"><a href="http://www.example.com/"><img src="{{ page.gif }}" alt="" /></a></span>
+		<span class="image main">
+			<a target="_blank" rel="noopener noreferrer" href="http://www.example.com/">
+				<img src="{{ page.gif }}" alt="" />
+			</a>
+		</span>
 		{% elsif page.image %}
 		<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>
 		{% endif %}
