@@ -1,13 +1,3 @@
----
-layout: post
-title: Self-Driving - Lane Detection
-description: Program to detect lanes in a video
-image: https://github.com/VipinindKumar/Self-Driving/raw/master/output/short1.0.gif
-gif: https://github.com/VipinindKumar/Self-Driving/raw/master/output/out1.0.gif
-nav-menu: true
-show_tile: true
----
-
 # Self-Driving - Lane Detection: program to detect lanes in a video 
 
 ## Version 1.0:

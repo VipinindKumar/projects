@@ -22,7 +22,20 @@
 		<header class="major">
 			<h1>{{ page.title }}</h1>
 		</header>
-		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
+		{% if page.gif %}
+		{% if page.title == "Self-Driving - Lane Detection" %}
+			<span class="image main">
+				<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/wc0p240Gh40">
+					<img src="{{ page.gif }}" alt="youtube video preview gif" />
+				</a>
+			</span>
+		{% else %}
+			<span class="image main"><img src="{{ page.gif }}" alt="" /></span>
+		{% endif %}
+		</span>
+		{% elsif page.image %}
+		<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>
+		{% endif %}
 		<p>{{ content }}</p>
 	</div>
 </section>

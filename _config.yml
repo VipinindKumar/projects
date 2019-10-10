@@ -1,16 +1,19 @@
 # site settings
-title: Forty
-subtitle: by HTML5 UP
-email: youremailaddress@gmail.com
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+title: Vipin Kumar
+subtitle: Projects
+email: vipin.ind.kumar@gmail.com
+description: "<b>Machine Learning:\ </b>Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks<br>
+             <b>Languages:\ </b>Python, Matlab/Octave, Java, C, JavaScript, PHP, SQL, Standard ML, Racket<br>
+             <b>Technologies:\ </b>Scikit-Learn, Keras, TensorFlow, pandas, NumPy, Linux<br>
+             <b>Computer Science:\ </b>Programming language theory, Functional Programming, OOP, Systematic Program Design"
 baseurl: "/projects" # the subpath of your site, e.g. /blog
-url: "https://vipinindkumar.github.io" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
-country: United States of America
+street_address: 
+city: Delhi
+state: 
+zip_code: 
+country: India
 phone: (716) 555-5555
 
 # homepage tiles
@@ -20,14 +23,14 @@ tiles-count: 6
 # social settings
 500px_url:
 facebook_url:
-github_url:
-gitlab_url: https://gitlab.com/u/andrewbanchich
-googleplus_url: https://plus.google.com/u/0/+AndrewBanchich
-instagram_url: https://instagram.com
-linkedin_url: https://www.linkedin.com/in/andrew-banchich-a4ba1195
+github_url: https://github.com/VipinindKumar/
+gitlab_url: 
+googleplus_url: 
+instagram_url: 
+linkedin_url: https://www.linkedin.com/in/vipinindkumar/
 pinterest_url:
 slack_url:
-twitter_url: https://twitter.com/andrewbanchich
+twitter_url: 
 
 # build settings
 markdown: kramdown
