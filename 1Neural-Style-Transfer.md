@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Neural-Style-Transfer
 description: Implementation of a Neural Netwrok to perform Style Transfer, using transfer learning of a VGG19 imagenet model 
 image: https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmton-taj/generated_image.jpg
