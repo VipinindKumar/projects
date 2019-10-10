@@ -6,17 +6,6 @@ image: https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/
 nav-menu: true
 ---
 
-<!-- Main -->
-<div id="main" class="alt">
-
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>Neural-Style-Transfer</h1>
-		</header>
-
-<!-- Content -->
 # Neural-Style-Transfer
 Implementation of a Neural Netwrok to perform Style Transfer, using transfer learning of a VGG19 imagenet model 
 
