@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Elements
+image: https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmton-taj/generated_image.jpg
 nav-menu: true
 ---
 
