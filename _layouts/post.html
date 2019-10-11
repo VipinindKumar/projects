@@ -29,14 +29,16 @@
 					<img src="{{ page.gif }}" alt="youtube video preview gif" />
 				</a>
 			</span>
-		{% elsif page.title == "Neural-Style-Transfer" %}
-			<span></span>
 		{% else %}
 			<span class="image main"><img src="{{ page.gif }}" alt="" /></span>
 		{% endif %}
 		</span>
 		{% elsif page.image %}
-		<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>
+		{% if page.title == "Neural-Style-Transfer" %}
+			<span></span>
+		{% else %}
+			<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>
+		{% endif %}
 		{% endif %}
 		<p>{{ content }}</p>
 	</div>
