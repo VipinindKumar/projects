@@ -8,6 +8,18 @@ nav-menu: true
 
 Implementation of a Neural Netwrok to perform Style Transfer, using transfer learning of a VGG19 imagenet model 
 
+1. Create an Interactive session
+2. load content image
+3. load style image
+4. add random noise to the content image, to create initial generated image
+5. load pretrained model
+6. build the tensorflow graph
+   a. Run the content image through the model and compute the content cost
+   b. Run the style image through the model and compute the style cost
+   c. Compute the total cost
+   d. Define the optimizer and the learning rate
+7. initialize the tensorflow graph and run it for no. of iterations while updating genrated image G at every step
+
 <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/Taj_Mahal.jpeg" width="400" height="300"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmton-taj/generated_image.jpg"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/city-taj/generated_image.jpg"> 
 
 * ### Style Image (images/galmpton-painting.jpg):
