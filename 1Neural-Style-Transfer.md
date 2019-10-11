@@ -14,12 +14,12 @@ Implementation of a Neural Netwrok to perform Style Transfer, using transfer lea
 * ### Style Image (images/galmpton-painting.jpg):
 <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-painting.jpg" width="500">
 
-  * #### Content Image (images/delhi.jpg)
+ * #### Content Image (images/delhi.jpg)
 <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/delhi.jpg" width="400" height="300"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-delhi/50.png"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-delhi/generated_image.jpg">
 
-  * #### Content Image (images/Lal_quila.jpg)
+ * #### Content Image (images/Lal_quila.jpg)
 <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/Lal_quila.jpg" width="400" height="300"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-lal/50.png"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-lal/generated_image.jpg">
 
 
-  * #### Content Image (images/Rashtrapati-bhavan.jpg)
+ * #### Content Image (images/Rashtrapati-bhavan.jpg)
 <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/Rashtrapati-bhavan.jpg" width="400" height="300"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-rashtrapati/50.png"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-rashtrapati/generated_image.jpg">
