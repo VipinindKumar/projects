@@ -6,7 +6,7 @@ image: https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/
 nav-menu: true
 ---
 
-Implementation of a Neural Netwrok to perform Style Transfer, using transfer learning of a VGG19 imagenet model 
+### Implementation of a Neural Netwrok to perform Style Transfer, using transfer learning of a VGG19 imagenet model 
 
 1. Create an Interactive session
 2. load content image
