@@ -9,7 +9,7 @@ nav-menu: true
 # Neural-Style-Transfer
 Implementation of a Neural Netwrok to perform Style Transfer, using transfer learning of a VGG19 imagenet model 
 
-<img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/Taj_Mahal.jpeg"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmton-taj/generated_image.jpg"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/city-taj/generated_image.jpg"> 
+<img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/Taj_Mahal.jpeg" width=400> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmton-taj/generated_image.jpg"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/city-taj/generated_image.jpg"> 
 
 * ### Style Image (images/galmpton-painting.jpg):
 <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmpton-painting.jpg" width="500">
