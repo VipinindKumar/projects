@@ -6,8 +6,6 @@ image: https://github.com/VipinindKumar/Predict-Future-Sales/raw/master/feature_
 nav-menu: true
 ---
 
-# Predict-Future-Sales
-
 ### Predict total sales for every item and shop for the next month, from a time-series dataset consisting of daily sales data
 
 #### Columns:
