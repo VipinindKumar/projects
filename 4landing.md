@@ -1,6 +1,6 @@
 ---
 title: Webliza
-layout: landing
+layout: post
 description: Implementation of ELIZA in python, with user-interface to chat with the bot
 gif: https://github.com/VipinindKumar/Webliza/raw/master/webliza.gif
 nav-menu: true
