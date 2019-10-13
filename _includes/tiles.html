@@ -2,8 +2,6 @@
   {% for post in site.posts limit:site.tiles-count %}
   {% if site.tiles-source == 'posts' %}
   <article>
-    <span class="postTest">
-    </span>
     <span class="image">
       <img src="{{ post.image }}" alt="" />
     </span>
@@ -17,8 +15,6 @@
   {% for page in site.pages limit:site.tiles-count %}
   {% if site.tiles-source == 'pages' and page.show_tile != false %}
   <article>
-    <span class="pageTest">
-    </span>
     <span class="image">
       <img src="{{ page.image }}" alt="" />
     </span>
