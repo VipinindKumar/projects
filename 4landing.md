@@ -1,7 +1,7 @@
 ---
-title: Landing
+title: Webliza
 layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
+description: Implementation of ELIZA in python, with user-interface to chat with the bot
 image: assets/images/pic07.jpg
 nav-menu: true
 ---
