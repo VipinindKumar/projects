@@ -29,17 +29,21 @@
 					<img src="{{ page.gif }}" alt="youtube video preview gif" />
 				</a>
 			</span>
+		{% elsif page.title == "Webliza" %}
+			<span class="image main">
+				<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/ZEsKuDIHsrQ">
+					<img src="{{ page.gif }}" alt="youtube video preview gif" />
+				</a>
+			</span>
 		{% else %}
 			<span class="image main"><img src="{{ page.gif }}" alt="" /></span>
 		{% endif %}
-		</span>
 		{% elsif page.image %}
-		<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>
+			<span></span>
 		{% endif %}
 		<p>{{ content }}</p>
 	</div>
 </section>
-
 </div>
 
     {% include footer.html %}
