@@ -24,6 +24,8 @@ Created as a final project for CS50 course.
     - that displays it, scrolls to bottom(inside box) and then empty the typing #message-box.
 
 
+[Github Repository - Webliza](https://github.com/VipinindKumar/Webliza)
+
 
 [Static part of the project deployed on github pages](https://vipinindkumar.github.io/Webliza/)
 
