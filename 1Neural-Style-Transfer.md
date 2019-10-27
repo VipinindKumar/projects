@@ -20,6 +20,8 @@ nav-menu: true
    * Define the optimizer and the learning rate
 7. initialize the tensorflow graph and run it for no. of iterations while updating genrated image G at every step
 
+[Github Repository - Neural-Style-Transfer](https://github.com/VipinindKumar/Neural-Style-Transfer)
+
 <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/Taj_Mahal.jpeg" width="400" height="300"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmton-taj/generated_image.jpg"> <img src="https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/city-taj/generated_image.jpg"> 
 
 * ### Style Image (images/galmpton-painting.jpg):
