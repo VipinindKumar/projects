@@ -19,3 +19,5 @@ Use arrow keys to move him and reach for GLORRYYYYY and remember everyone wants 
 
 
 [**Link to the code on scratch.mit.edu**](https://scratch.mit.edu/projects/53720774/editor/)
+
+[**Github Repository**](https://github.com/VipinindKumar/gamory)
