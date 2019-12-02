@@ -16,3 +16,6 @@ nav-menu: true
 Now he got to make a decision, ' take a risk of death and try to win millions of dollars' or hmmmmm may be nothing. He made a decision Guys, he is going for it, Now just help him because he is nothing without you.
 
 Use arrow keys to move him and reach for GLORRYYYYY and remember everyone wants to eat him(Even the Ghost, yeah you read it right "The Ghost") and yeah he will buy lottery ticket later, so don't worry about that.
+
+
+[**Link to the code on scratch.mit.edu**](https://scratch.mit.edu/projects/53720774/editor/)
