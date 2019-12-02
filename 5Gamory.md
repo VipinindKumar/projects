@@ -9,6 +9,7 @@ nav-menu: true
 
 <iframe src="https://scratch.mit.edu/projects/53720774/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
+<hr/>
 
 **Description:** Long time ago there was a mouse name "Mouse", one day he decided to buy a lottery ticket, then all of a sudden he (because he was a male) saw something, "a frenzy", "a hell", "a death trap" aahhhhhhhhh. But he also noticed, a sure way (or atleast can increase chances) of winning a lottery, "A FORTUNE COOKIE". All of sudden a big noise emerges guuuuddddhhhhhh, he frightened first and then he realized it was his tummy.
 
