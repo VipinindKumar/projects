@@ -2,7 +2,7 @@
 layout: post
 title: Text Generation
 description: Text generation from a Recurrent Neural Network trained on English translated version of "The Ramayana of Valmiki, translated by Hari Prasad Shastri" 
-image: https://github.com/VipinindKumar/Neural-Style-Transfer/raw/master/images/galmton-taj/generated_image.jpg
+image: https://raw.githubusercontent.com/VipinindKumar/text-generation/master/image/ramayan.jpg
 nav-menu: true
 ---
 
