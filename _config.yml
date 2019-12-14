@@ -6,7 +6,7 @@ description: "<b>Machine Learning:\ </b>Deep Learning, CNN, RNN, Feature Enginee
              <b>Languages:\ </b>Python, Matlab/Octave, Java, C, JavaScript, PHP, SQL, Standard ML, Racket<br>
              <b>Technologies:\ </b>Scikit-Learn, Keras, TensorFlow, Spark, Pandas, NumPy, OpenCV, XGBoost, Linux<br>
              <b>Computer Science:\ </b>Programming language theory, Functional Programming, OOP, Systematic Program Design"
-baseurl: "/projects" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
 street_address: 
