@@ -227,7 +227,7 @@ dtype: float64
 From: Xavier Glorot, Antoine Bordes and Yoshua Bengio
 ```
 
-![](images/reluActivation.png)
+![](https://github.com/VipinindKumar/NNforFeatures/raw/master/images/reluActivation.png)
 
 
 
