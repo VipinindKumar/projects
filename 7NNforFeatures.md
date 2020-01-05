@@ -20,6 +20,7 @@ shape = (768, 8)
 
 
 * Fixed seed for reproducible results (still will vary a little):
+
 ```python
 seed = 43
 import os
@@ -35,6 +36,7 @@ rn.seed(seed)
 
 
 * Scale the data for 0 mean and unit std, using sklearn's StandardScaler():
+
 ```python
 # adding scailing of the data
 from sklearn.preprocessing import StandardScaler
@@ -47,6 +49,7 @@ X_scl = pd.DataFrame(X_scl_arr, columns=X.columns)
 
 
 * Neural Network build using Keras library:
+
 ```python
 input = Input(shape=(X_scl.shape[1],))
 
@@ -67,6 +70,7 @@ model = Model(inputs=input, outputs=output)
 
 
 * model.summary():
+
 ```
 Model: "model_1"
 _________________________________________________________________
@@ -91,6 +95,7 @@ _________________________________________________________________
 
 
 * Adam Optimizer:
+
 ```python
 adam_opt = Adam(learning_rate=0.001,beta_1=0.9, beta_2=0.999, amsgrad=False)
 ```
@@ -98,6 +103,7 @@ adam_opt = Adam(learning_rate=0.001,beta_1=0.9, beta_2=0.999, amsgrad=False)
 
 
 * Loss and Metric:
+
 ```python
 model.compile(loss='mean_squared_error', optimizer=adam_opt, metrics=['accuracy'])
 ```
@@ -105,6 +111,7 @@ model.compile(loss='mean_squared_error', optimizer=adam_opt, metrics=['accuracy'
 
 
 * .fit() Hypreparameters:
+
 ```python
 fit = model.fit(X_scl, Y, epochs=500, validation_split=0.3)
 ```
@@ -113,6 +120,7 @@ fit = model.fit(X_scl, Y, epochs=500, validation_split=0.3)
 
 
 * XGBoost model to measure the features importance:
+
 ```python
 def xgb_model(X, Y):
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=seed)
@@ -133,6 +141,7 @@ def xgb_model(X, Y):
 
 
 * Feature Importamce:
+
 ```python
 plot_importance(xgbModel)
 ```
@@ -141,6 +150,7 @@ plot_importance(xgbModel)
 
 
 * Getting Weights and bias for hidden layer:
+
 ```python
 w = h1.get_weights()[0]
 
@@ -150,6 +160,7 @@ b = h1.get_weights()[1]
 
 
 * Calculating activation for first hidden layer:
+
 ```python
 # calculate activation for h1 layer
 # a = g(z) = g(wx + b)
@@ -173,6 +184,7 @@ a1.shape
     - L1 regularization?
 - a1.sum():
     - only 6 non-zero features
+
 ```
 f1-0     129.157055
 f1-1       0.000000
@@ -208,10 +220,13 @@ f1-30      0.000000
 f1-31      0.000000
 dtype: float64
 ```
+
 - RELU activation function induuce sparsity
+
 ```
 From: Xavier Glorot, Antoine Bordes and Yoshua Bengio
 ```
+
 ![](images/reluActivation.png)
 
 
