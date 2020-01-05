@@ -145,7 +145,8 @@ def xgb_model(X, Y):
 ```python
 plot_importance(xgbModel)
 ```
-![pima dataset feature importance](images/pima_feature_importance.png)
+
+![pima dataset feature importance](https://github.com/VipinindKumar/NNforFeatures/raw/master/images/pima_feature_importance.png)
 
 
 
