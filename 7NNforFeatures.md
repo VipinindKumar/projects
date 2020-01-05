@@ -6,7 +6,6 @@ image: https://github.com/VipinindKumar/Predict-Future-Sales/raw/master/feature_
 nav-menu: true
 ---
 
-# NNforFeatures
 Exloring automation of Feature Engineering using Neural Netwroks
 
 <hr>
