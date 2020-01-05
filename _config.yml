@@ -18,7 +18,7 @@ phone: +91 8882997454
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 7
+tiles-count: 8
 
 # social settings
 500px_url:
