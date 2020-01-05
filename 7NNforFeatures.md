@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Research: Automatic Features"
-description: Predict total sales for every item and shop for the next month, from a time-series dataset consisting of daily sales data
+description: Exloring automation of Feature Engineering using Neural Netwroks
 image: https://github.com/VipinindKumar/NNforFeatures/raw/master/images/F2.large.jpg
 nav-menu: true
 ---
