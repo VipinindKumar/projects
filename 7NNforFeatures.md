@@ -6,13 +6,16 @@ image: https://github.com/VipinindKumar/NNforFeatures/raw/master/images/F2.large
 nav-menu: true
 ---
 
-Exloring automation of Feature Engineering using Neural Netwroks
+Exploring automation of Feature Engineering using Neural Netwroks
 
-<hr>
-- Need to do:
-    - New Dataset (bigger and with diverse uncorrelated features)
-    - abstract function to utilize both tanh and leakyrelu as activation
 
+## Introduction:
+
+Instead of doing Feature Engineering with hand by mean-encoding, breaking strings, trends, averages, combination of features etc. It would be nice if we could automate the feature engineering process. 
+
+Main idea being that activations in hidden layers of a deep Neural Network, are combinations of input features, generally representing lower level details or patterns to higher level details of the input data. Using these details as input features in other type of models and investigate the effects of using hidden layer activations as input features(being automatically engineered by training a Neural Network).
+
+Instead of X as input investigating the effects of using A1, A2, ... as inputs for model's training.
 
 <hr>
 
@@ -26,7 +29,6 @@ shape = (768, 8)
 
 
 * Fixed seed for reproducible results (still will vary a little):
-
 ```python
 seed = 43
 import os
@@ -41,42 +43,10 @@ rn.seed(seed)
 ```
 
 
-* Scale the data for 0 mean and unit std, using sklearn's StandardScaler():
-
-```python
-# adding scailing of the data
-from sklearn.preprocessing import StandardScaler
-
-scaler = StandardScaler()
-X_scl_arr = scaler.fit_transform(X) #ndarray
-
-X_scl = pd.DataFrame(X_scl_arr, columns=X.columns)
-```
+* Scale the data for 0 mean and unit std, using sklearn's StandardScaler()
 
 
-* Neural Network build using Keras library:
-
-```python
-input = Input(shape=(X_scl.shape[1],))
-
-h1 = Dense(32, activation='relu', kernel_regularizer=regularizers.l2(0.03))
-a1 = h1(input)
-
-h2 = Dense(32, activation='relu', kernel_regularizer=regularizers.l2(0.03))
-a2 = h2(a1)
-
-h3 = Dense(4, activation='relu')
-a3 = h3(a2)
-
-output = Dense(1, activation='sigmoid')(a3)
-
-model = Model(inputs=input, outputs=output)
-```
-
-
-
-* model.summary():
-
+* Neural Network build using Keras library, model.summary():
 ```
 Model: "model_1"
 _________________________________________________________________
@@ -101,7 +71,6 @@ _________________________________________________________________
 
 
 * Adam Optimizer:
-
 ```python
 adam_opt = Adam(learning_rate=0.001,beta_1=0.9, beta_2=0.999, amsgrad=False)
 ```
@@ -109,7 +78,6 @@ adam_opt = Adam(learning_rate=0.001,beta_1=0.9, beta_2=0.999, amsgrad=False)
 
 
 * Loss and Metric:
-
 ```python
 model.compile(loss='mean_squared_error', optimizer=adam_opt, metrics=['accuracy'])
 ```
@@ -117,7 +85,6 @@ model.compile(loss='mean_squared_error', optimizer=adam_opt, metrics=['accuracy'
 
 
 * .fit() Hypreparameters:
-
 ```python
 fit = model.fit(X_scl, Y, epochs=500, validation_split=0.3)
 ```
@@ -126,72 +93,36 @@ fit = model.fit(X_scl, Y, epochs=500, validation_split=0.3)
 
 
 * XGBoost model to measure the features importance:
-
 ```python
-def xgb_model(X, Y):
-    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=seed)
-
-    model = XGBClassifier(max_depth=7, random_state=seed, min_child_weight=15, learning_rate=0.001,
-                          n_estimators=400)
-
-    model.fit(X_train, y_train)
-
-    y_pred_train = model.predict(X_train)
-    y_pred = model.predict(X_test)
-
-    # evaluate predictions
-    print("Train: %.2f%%" % (accuracy_score(y_train, y_pred_train) * 100.0))
-    print("Test: %.2f%%" % (accuracy_score(y_test, y_pred) * 100.0))
+model = XGBClassifier(max_depth=7,
+                      random_state=seed,
+                      min_child_weight=15, 
+                      learning_rate=0.001,
+                      n_estimators=400)
 ```
 
 
 
-* Feature Importamce:
+* Feature Importamce in XGBoost model:
 
+![pima dataset feature importance](images/pima_feature_importance.png)
+
+
+
+* Getting Weights and bias for hidden layer and then Calculating activation for hidden layers, using calcActivation(model, X, act) function:
 ```python
-plot_importance(xgbModel)
-```
-
-![pima dataset feature importance](https://github.com/VipinindKumar/NNforFeatures/raw/master/images/pima_feature_importance.png)
-
-
-
-* Getting Weights and bias for hidden layer:
-
-```python
-w = h1.get_weights()[0]
-
-b = h1.get_weights()[1]
-```
-
-
-
-* Calculating activation for first hidden layer:
-
-```python
-# calculate activation for h1 layer
+# calculate activation for hidden layers
 # a = g(z) = g(wx + b)
 # (nl,m)   (nl,n)(n,m)  (nl,1)
-
-# reshape to right dimensions
-b1 = b.reshape((-1,1))
-
-# calculate z
-z1 = w.T @ X_scl.T + b1
-
-# relu function for layer activations
-a1 = np.maximum(0, z1)
-a1.shape
 ```
 <hr>
 
-* a1 mostly 0.0000s, sparse dataframe::
+* a1 mostly 0.0000s, sparse dataframe with relu activation:
     - more hidden units than required?
     - check % of zeroes in features
     - L1 regularization?
 - a1.sum():
     - only 6 non-zero features
-
 ```
 f1-0     129.157055
 f1-1       0.000000
@@ -234,9 +165,152 @@ dtype: float64
 From: Xavier Glorot, Antoine Bordes and Yoshua Bengio
 ```
 
-![](https://github.com/VipinindKumar/NNforFeatures/raw/master/images/reluActivation.png)
+![](images/reluActivation.png)
 
 
 
 - 11 non-zero features using LeakyRelu with alpha as 0.01
 - 32 using tanh
+
+<hr>
+
+## Output:
+
+
+- Run XGBmodel:
+   - with X as input
+   - using RELU:
+        - with a1 as input
+        - with a2 as input
+   - using TanH:
+        - with a1 as input
+        - with a2 as input
+
+```
+XGB Train accuracy: 76.54%
+XGB Test accuracy: 80.09%
+
+relu:
+NN train loss: 0.1564963618414806
+NN val loss: 0.14792472207959081
+NN train accuracy: 0.7858473
+NN val accuracy: 0.7965368032455444
+    a1=>
+    XGB Train accuracy: 76.54%
+    XGB Test accuracy: 77.92%
+    a2=>
+    XGB Train accuracy: 79.33%
+    XGB Test accuracy: 80.09%
+
+tanh:
+NN train loss: 0.16395572024905702
+NN val loss: 0.14515615728768436
+NN train accuracy: 0.7765363
+NN val accuracy: 0.7922077775001526
+    a1=>
+    XGB Train accuracy: 77.84%
+    XGB Test accuracy: 80.95%
+    a2=>
+    XGB Train accuracy: 77.84%
+    XGB Test accuracy: 81.39%
+```
+
+## Observations:
+
+- For both activations relu and tanh, a2 as input performs better than a1
+- Near or better accuracy for both train and test with a2 than X
+- Neural Network with X vs. XGBoost with a1 & a2:
+    - relu:
+        - a1 is little better in train and worse in test
+        - a2 is better in train and same in test
+    - tanh:
+        - a1 is same in train and better in test
+        - a2 is better in train and much better in test
+
+<hr>
+
+## Output:
+
+- Run XGBmodel:
+   - with X as input
+   - using RELU:
+        - with a1 as input
+        - with a2 as input
+        - with a1 & a2 as input
+        - with X & a1 as input
+        - with X & a2 as input
+        - with X, a1 & a2 as input
+   - using TanH:
+        - with a1 as input
+        - with a2 as input
+        - with a1 & a2 as input
+        - with X & a1 as input
+        - with X & a2 as input
+        - with X, a1 & a2 as input
+
+
+```
+XGB Train accuracy: 76.54%
+XGB Test accuracy: 80.09%
+
+relu:
+NN train loss: 0.15655751415360128
+NN val loss: 0.14780039391863398
+NN train accuracy: 0.7877095
+NN val accuracy: 0.7965368032455444
+    a1=>
+    XGB Train accuracy: 79.33%
+    XGB Test accuracy: 78.79%
+    a2=>
+    XGB Train accuracy: 79.33%
+    XGB Test accuracy: 80.09%
+    a1 & a2=>
+    XGB Train accuracy: 79.33%
+    XGB Test accuracy: 80.09%
+    X & a1=>
+    XGB Train accuracy: 79.33%
+    XGB Test accuracy: 77.92%
+    X & a2=>
+    XGB Train accuracy: 79.33%
+    XGB Test accuracy: 80.09%
+    X & a1 & a2=>
+    XGB Train accuracy: 79.33%
+    XGB Test accuracy: 80.09%
+
+tanh:
+NN train loss: 0.16419628392939684
+NN val loss: 0.14518083461048284
+NN train accuracy: 0.7802607
+NN val accuracy: 0.7922077775001526
+    a1=>
+    XGB Train accuracy: 77.84%
+    XGB Test accuracy: 80.95%
+    a2=>
+    XGB Train accuracy: 78.21%
+    XGB Test accuracy: 81.39%
+    a1 & a2=>
+    XGB Train accuracy: 78.77%
+    XGB Test accuracy: 79.22%
+    X & a1=>
+    XGB Train accuracy: 77.84%
+    XGB Test accuracy: 80.95%
+    X & a2=>
+    XGB Train accuracy: 78.21%
+    XGB Test accuracy: 79.22%
+    X & a1 & a2=>
+    XGB Train accuracy: 78.77%
+    XGB Test accuracy: 79.22%
+```
+
+## Observation:
+
+- adding X in the input doesn't affect the final result that much.
+
+
+
+<hr>
+
+- Need to do:
+    - New Dataset (bigger and with diverse uncorrelated features)
+    - ~~abstract function to utilize both tanh and leakyrelu as activation~~
+    - the increase in performance need to investegated further using a bigger Neural Network combined with big and diverse Data.
