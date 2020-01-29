@@ -321,5 +321,7 @@ NN val accuracy: 0.7922077775001526
 
 - Need to do:
     - New Dataset (bigger and with diverse uncorrelated features)
-    - ~~abstract function to utilize both tanh and leakyrelu as activation~~
-    - the increase in performance need to investegated further using a bigger Neural Network combined with big and diverse Data.
+    - ~~Abstract function to utilize both tanh and leakyrelu as activation~~
+    - The increase in performance need to investegated further using a bigger Neural Network combined with big and diverse Data.
+    - Explore the Feature importance of these "Activation Features"
+    - Consider the memory usage of these activations, relu giving 6 features to use and tanh giving 32.
