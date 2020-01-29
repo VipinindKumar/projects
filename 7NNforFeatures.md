@@ -112,7 +112,7 @@ model = XGBClassifier(max_depth=7,
 
 * Feature Importamce in XGBoost model:
 
-![pima dataset feature importance](images/pima_feature_importance.png)
+![pima dataset feature importance](https://raw.githubusercontent.com/VipinindKumar/NNforFeatures/master/images/pima_feature_importance.png)
 
 
 
@@ -174,7 +174,7 @@ dtype: float64
 From: Xavier Glorot, Antoine Bordes and Yoshua Bengio
 ```
 
-![](images/reluActivation.png)
+![](https://raw.githubusercontent.com/VipinindKumar/NNforFeatures/master/images/reluActivation.png)
 
 
 
