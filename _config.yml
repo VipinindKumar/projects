@@ -14,7 +14,7 @@ city: Delhi
 state: 
 zip_code: 
 country: India
-phone: +91 8882997454
+phone: ----------
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
