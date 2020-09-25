@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Research: Automatic Features"
+title: "Automatic Features"
 description: Exloring automation of Feature Engineering using Neural Netwroks
 image: https://github.com/VipinindKumar/NNforFeatures/raw/master/images/F2.large.jpg
 nav-menu: true
