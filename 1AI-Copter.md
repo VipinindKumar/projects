@@ -51,3 +51,6 @@ AI that learns to play the Classic Copter game.
   - maybe, need deeper dive and running for a fixed saturated amount of time
   
 - Can make the game run faster, by increasing the FPS constant
+
+
+[Github repository](https://github.com/VipinindKumar/AI-Copter)
