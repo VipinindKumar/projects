@@ -3,14 +3,12 @@ layout: post
 title: AI Copter
 description: AI that learns to play the classic Copter game
 image: https://raw.githubusercontent.com/VipinindKumar/AI-Copter/main/progress/9-score-small.gif
-gif: https://raw.githubusercontent.com/VipinindKumar/AI-Copter/main/progress/9-score.gif
 nav-menu: true
 show_tile: true
 ---
 
 
-# AI Copter
-AI that learns to play Classic Copter game.
+AI that learns to play the Classic Copter game.
 
 <img align="center" src="https://raw.githubusercontent.com/VipinindKumar/AI-Copter/main/progress/9-score.gif"/>
 
