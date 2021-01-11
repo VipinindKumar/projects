@@ -11,7 +11,7 @@ show_tile: true
 # AI Copter
 AI that learns to play Classic Copter game.
 
-<img align='middle' src="https://raw.githubusercontent.com/VipinindKumar/AI-Copter/main/progress/9-score.gif"/>
+<img src="https://raw.githubusercontent.com/VipinindKumar/AI-Copter/main/progress/9-score.gif"/>
 
 ### Pygame window and copter pixel image on it
 <img src="https://raw.githubusercontent.com/VipinindKumar/AI-Copter/main/progress/1.png" alt="copter" width="300"/>
